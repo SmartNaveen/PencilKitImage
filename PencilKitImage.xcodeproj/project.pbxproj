@@ -13,6 +13,8 @@
 		E7802B1B2608FCB700F7C44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7802B192608FCB700F7C44C /* Main.storyboard */; };
 		E7802B1D2608FCB800F7C44C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7802B1C2608FCB800F7C44C /* Assets.xcassets */; };
 		E7802B202608FCB800F7C44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7802B1E2608FCB800F7C44C /* LaunchScreen.storyboard */; };
+		E7802BA1260F479200F7C44C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7802B9F260F479200F7C44C /* ResultViewController.swift */; };
+		E7802BA2260F479200F7C44C /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7802BA0260F479200F7C44C /* ResultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E7802B1C2608FCB800F7C44C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7802B1F2608FCB800F7C44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7802B212608FCB800F7C44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7802B9F260F479200F7C44C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		E7802BA0260F479200F7C44C /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				E7802B132608FCB700F7C44C /* AppDelegate.swift */,
 				E7802B152608FCB700F7C44C /* SceneDelegate.swift */,
 				E7802B172608FCB700F7C44C /* ViewController.swift */,
+				E7802B9F260F479200F7C44C /* ResultViewController.swift */,
+				E7802BA0260F479200F7C44C /* ResultViewController.xib */,
 				E7802B192608FCB700F7C44C /* Main.storyboard */,
 				E7802B1C2608FCB800F7C44C /* Assets.xcassets */,
 				E7802B1E2608FCB800F7C44C /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 				E7802B202608FCB800F7C44C /* LaunchScreen.storyboard in Resources */,
 				E7802B1D2608FCB800F7C44C /* Assets.xcassets in Resources */,
 				E7802B1B2608FCB700F7C44C /* Main.storyboard in Resources */,
+				E7802BA2260F479200F7C44C /* ResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 				E7802B182608FCB700F7C44C /* ViewController.swift in Sources */,
 				E7802B142608FCB700F7C44C /* AppDelegate.swift in Sources */,
 				E7802B162608FCB700F7C44C /* SceneDelegate.swift in Sources */,
+				E7802BA1260F479200F7C44C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

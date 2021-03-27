@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uAA-VB-REd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PencilKitImage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="PKCanvasView" translatesAutoresizingMaskIntoConstraints="NO" id="gT8-1R-AXn" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gT8-1R-AXn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cfz-gu-4IC"/>
+                            <constraint firstItem="gT8-1R-AXn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HCc-JK-59R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gT8-1R-AXn" secondAttribute="trailing" id="aE4-3u-QrH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gT8-1R-AXn" secondAttribute="bottom" id="h6Z-pV-d2g"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ND5-p8-KFf">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Undo" id="xQG-pm-rJw">
+                                <connections>
+                                    <action selector="undo:" destination="dkx-z0-nzr" id="GXs-bA-ngR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Redo" id="7p5-Y3-fce">
+                                <connections>
+                                    <action selector="redo:" destination="dkx-z0-nzr" id="YCu-DE-yIV"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Clear" id="iJL-6G-faP">
+                                <connections>
+                                    <action selector="clearCanvasButtonTapped:" destination="BYZ-38-t0r" id="MRB-he-h7b"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Image" id="0uW-Rd-FLj">
+                                <connections>
+                                    <action selector="imageButtonTapped:" destination="BYZ-38-t0r" id="VXJ-MN-Rpy"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="IAH-oa-tMw">
+                                <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" id="uOF-JU-WgU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="canvasView" destination="gT8-1R-AXn" id="5u6-gK-0ZX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ATa-tw-gtR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uAA-VB-REd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ek-79-tqJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vMB-ih-QZq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1N-0s-QNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
